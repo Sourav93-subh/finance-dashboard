@@ -7,7 +7,7 @@ const data = [
   { id: 4, date: "2026-04-04", amount: 2000, category: "Freelance", type: "income" },
 ];
 
-const Transactions = () => {
+const Transactions = ({ role }) => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
 
@@ -50,6 +50,7 @@ const Transactions = () => {
             <th>Amount</th>
             <th>Category</th>
             <th>Type</th>
+            {role === "admin" && <th>Action</th>}
           </tr>
         </thead>
 
@@ -68,12 +69,21 @@ const Transactions = () => {
               >
                 {item.type}
               </td>
+
+              {/* ✅ THIS IS THE CORRECT PLACE */}
+              {role === "admin" && (
+                <td>
+                  <button className="text-red-500 hover:underline">
+                    Delete
+                  </button>
+                </td>
+              )}
+
             </tr>
           ))}
         </tbody>
       </table>
 
-      {/* Empty State */}
       {filteredData.length === 0 && (
         <p className="text-center mt-4 text-gray-500">
           No transactions found
