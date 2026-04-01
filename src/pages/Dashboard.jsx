@@ -2,6 +2,7 @@ import { useState } from "react";
 import SummaryCards from "../components/cards/SummaryCards";
 import Charts from "../components/charts/Charts";
 import Transactions from "../components/transactions/Transactions";
+import Insights from "../components/insights/Insights";
 
 const Dashboard = () => {
   const [role, setRole] = useState("viewer");
@@ -26,6 +27,9 @@ const Dashboard = () => {
       <SummaryCards />
       <Charts />
       <Transactions role={role} />
+
+      {/* ✅ ADD THIS */}
+      <Insights />
 
     </div>
   );
