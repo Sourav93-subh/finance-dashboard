@@ -1,16 +1,66 @@
-# React + Vite
+# 💰 Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Overview
+This is a frontend finance dashboard built to help users track and understand their financial activity. The project focuses on UI design, component structure, and state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 📊 Dashboard Overview
+- Summary cards (Balance, Income, Expenses)
+- Line chart (Balance trend)
+- Pie chart (Spending breakdown)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧾 Transactions
+- View transaction list
+- Search by category
+- Filter by income/expense
+- Delete transactions (Admin only)
 
-## Expanding the ESLint configuration
+### 👤 Role-Based UI
+- Viewer → Can only view data
+- Admin → Can delete transactions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 💡 Insights
+- Highest spending category
+- Total expenses
+- Savings calculation
+- Spending percentage analysis
+
+### 💾 Data Persistence
+- Transactions stored in localStorage
+- Data remains after page refresh
+
+### 🌙 UI Enhancements
+- Clean and responsive design
+
+---
+
+## 🛠 Tech Stack
+- React (Vite)
+- Tailwind CSS
+- Recharts
+
+---
+
+## 📂 Project Structure
+
+- src/
+- components/
+- cards/
+- charts/
+- transactions/
+- insights/
+- pages/
+- Dashboard.jsx
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+git clone <your-repo-link>
+cd finance-dashboard
+npm install
+npm run dev
